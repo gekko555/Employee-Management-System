@@ -17,15 +17,8 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
     @Query("SELECT e FROM Employee e ORDER BY e.id ASC")
     List<Employee> findAllOrderedByid();
 
-    //倫理削除（Statusを『'退職'』に更新）
-    @Modifying
-    @Query("UPDATE Employee e SET e.status = '退職' WHERE e.id = :id")
-    int logicalDeleteById(@Param("id") Long id);
+        //社員追加（INSERT）
+    // JpaRepositoryのsave()メソッドが自動的にINSERT処理をしてくれます
+    // 明示的にメソッドを定義する必要はありません
 
-    //部署で検索
-    List<Employee> findByDepartment(String department);
-
-    //在籍状況で検索
-    List<Employee> findByStatus(String status);
-    
 }

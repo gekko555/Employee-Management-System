@@ -3,7 +3,7 @@ package com.example.employeemanagementsystem.dto;
 public class EmployeeDisplayDto {
 
     //社員ID
-    private Long employeeId;
+    private Long id;
 
     //名前
     private String name;
@@ -11,8 +11,14 @@ public class EmployeeDisplayDto {
     //フリガナ
     private String furigana;
 
+    //年齢
+    private Integer age;
+
     //Email
     private String email;
+
+    //住所
+    private String address;
 
     //部署名
     private String department;
@@ -27,24 +33,26 @@ public class EmployeeDisplayDto {
     public EmployeeDisplayDto() {}
 
     // コンストラクタ（引数の学習用）
-    public EmployeeDisplayDto(Long employeeId, String name, String furigana, 
-                             String email, String department, String hireDate, String status) {
-        this.employeeId = employeeId;
+    public EmployeeDisplayDto(Long id, String name, String furigana, 
+                             String email, String address, String department, String hireDate, String status, Integer age) {
+        this.id = id;
         this.name = name;
         this.furigana = furigana;
         this.email = email;
+        this.address = address;
         this.department = department;
         this.hireDate = hireDate;
         this.status = status;
+        this.age = age;
     }
 
     // GetterとSetter
-    public Long getEmployeeId() {
-        return employeeId;
+    public Long getId() {
+        return id;
     }
 
-    public void setEmployeeId(Long employeeId) {
-        this.employeeId = employeeId;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -63,12 +71,28 @@ public class EmployeeDisplayDto {
         this.furigana = furigana;
     }
 
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
+
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getAddress(){
+        return address;
+    }
+
+    public void setAddress(String address){
+        this.address = address;
     }
 
     public String getDepartment() {
