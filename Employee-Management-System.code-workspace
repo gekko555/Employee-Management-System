@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "Employee-Management-System"
+		},
+		{
+			"path": "employee-management-frontend"
+		}
+	],
+	"settings": {
+		"java.compile.nullAnalysis.mode": "automatic"
+	}
+}
